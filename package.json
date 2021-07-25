@@ -8,12 +8,24 @@
   "scripts": {
     "start": "yarn node ./dist/index.js",
     "dev": "yarn node ./src/index.ts",
-    "build": "yarn tsc"
+    "build": "yarn tsc",
+    "test": "yarn jest"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node",
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "src/**/*.{js,ts}"
+    ]
   },
   "dependencies": {
     "typescript": "^4.3.5"
   },
   "devDependencies": {
+    "@types/jest": "^26.0.24",
+    "jest": "^27.0.6",
+    "ts-jest": "^27.0.4",
     "ts-node": "^10.1.0"
   }
 }
